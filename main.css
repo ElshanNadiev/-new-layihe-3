@@ -96,6 +96,7 @@ padding: 0 40px;
     border: 1px solid grey;
     border-radius: 5px;
     padding: 10px;
+    cursor: pointer;
 }
 
 .ayri1{ 
@@ -132,6 +133,7 @@ padding: 0 40px;
         border: 1px solid grey;
         border-radius: 5px;
         padding: 10px;
+        cursor: pointer;
     
     }    
     .zz1{
