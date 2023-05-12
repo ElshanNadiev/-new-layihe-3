@@ -4,6 +4,15 @@
     padding: 0px;
     font-family: sans-serif;
 } 
+a {
+    text-decoration: none;
+    color: inherit;
+    font: inherit;
+}
+body {
+    width: 1152px;
+    margin: 0 auto;
+}
 
 .item-head {
 width: 1152px;
@@ -13,22 +22,21 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 background: #F5F5F6;
+padding: 0 40px;
 }
 .item-img{
-    margin-left: 100px;
-    margin-right: 64px;
 }
 .giris{
     font-family: sans-serif;
     border-radius: 3px;
     font-weight: bold;
-    padding: 8px 4px;
+    padding: 8px 4px; 
+    border: solid 1px gray;
 
 }
 .giris:hover {
     background-color: darkviolet;
     cursor: pointer;
-    border: solid 1px gray;
     border-radius: 2px;
     font-family: sans-serif;
 }
@@ -42,13 +50,13 @@ background: #F5F5F6;
 
 .item-list li {
     height: 22px;
-    margin-right: 15px;
+    margin-right: 40px;
     color: black;
     border: solid 1px grey;
     border-radius: 3px;
     font-weight: bold;
     font-family: sans-serif;
-
+    transition: 1s;
 }
 .item-list li:hover{
     background-color: darkviolet;
@@ -57,13 +65,12 @@ background: #F5F5F6;
 }
 
 .item-img{
-    margin-top: 13px;
 }
 
 
 .itemconvert {
     
-  width: 900px;
+  width: 700px;
   margin: 100px auto;
     
 }
@@ -91,7 +98,9 @@ background: #F5F5F6;
     padding: 10px;
 }
 
-.ayri1{ background-color: darkviolet;
+.ayri1{ 
+    background-color: darkviolet;
+    transition: 1s;
 }
 .word1{
     height: 102px;
@@ -150,5 +159,5 @@ background: #F5F5F6;
         display: flex;
 
       }
-.item-little{margin-right:100px3;
+.item-little{margin-right:100px;
 }

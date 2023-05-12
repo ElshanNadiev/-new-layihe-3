@@ -34,9 +34,9 @@ function getData(c, e, l, r) {
         currVal = data.toFixed (4);
         const val = parseFloat(l.value);
         r.value =(val * currVal).toFixed (4);
-        currLeft.innerText = `1 ${c} = ${currVal} $(e)`;
+        plft1.innerText = `1 ${c} = ${currVal} ${e}`;
         const excVal = (1/currVal).toFixed(4);
-        currRight.innerText = `1 ${e} = ${excVal} $(c)`;
+        plft2.innerText = `1 ${e} = ${excVal} ${c}`;
     })
     .catch(e => alert ('Network error: error while getting data'));
 
@@ -68,7 +68,7 @@ function changeCurrentCurrency(e) {
 
         }
         e.target.value= e.target.value.replaceAll(',','.');
-        getData(currentCurr, exchangeCurr, word2left, word1left);
+        getData(currentCurr, exchangeCurr, word1left, word2left);
 
     });
 
@@ -78,7 +78,7 @@ function changeCurrentCurrency(e) {
 
         }
         e.target.value= e.target.value.replaceAll(',','.');
-        getData(exchangetCurr, currentCurr, word1left, word2left);
+        getData(exchangeCurr, currentCurr, word2left, word1left);
     });
     word1left.addEventListener('keydown', acceptNumber);
     word2left.addEventListener('keydown', acceptNumber);
@@ -91,10 +91,9 @@ function changeCurrentCurrency(e) {
             e.preventDefault();
         }
         if((e.key ==='.') || (e.key === '.')) {
-            if(e.target.value.indexOf('.') >= 0) {
+        if(e.target.value.indexOf('.') >= 0) {
                 e.preventDefault();
             }
-       
         }
     }
     
