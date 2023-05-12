@@ -111,7 +111,7 @@ padding: 0 40px;
     
     }
     .word1left{
-        width: 130px;
+        width: 100%;
         font-size: 36px;
         border: none;
         margin-top: 10px;
@@ -147,7 +147,7 @@ padding: 0 40px;
         
         }
         .word2left{
-            width: 160px;
+            width: 100%;
             font-size: 36px;
             border: none;
             margin-top: 10px;
@@ -160,4 +160,7 @@ padding: 0 40px;
 
       }
 .item-little{margin-right:100px;
+}
+.pleft1, .pleft2{
+    margin-top: 20px;
 }

@@ -33,10 +33,16 @@ function getData(c, e, l, r) {
     .then(data => {
         currVal = data.toFixed (4);
         const val = parseFloat(l.value);
-        r.value =(val * currVal).toFixed (4);
-        plft1.innerText = `1 ${c} = ${currVal} ${e}`;
-        const excVal = (1/currVal).toFixed(4);
-        plft2.innerText = `1 ${e} = ${excVal} ${c}`;
+        if(!isNaN(val)){
+            
+            r.value =(val * currVal).toFixed (4);
+            plft1.innerText = `1 ${c} = ${currVal} ${e}`;
+            const excVal = (1/currVal).toFixed(4);
+            plft2.innerText = `1 ${e} = ${excVal} ${c}`;
+        }
+        else{ 
+            r.value = ""
+        }
     })
     .catch(e => alert ('Network error: error while getting data'));
 
@@ -63,20 +69,14 @@ function changeCurrentCurrency(e) {
 
     }
     word1left.addEventListener('input', (e) => {
-        if(e.target.value === '') {
-            e.target.value = 0;
-
-        }
+       
         e.target.value= e.target.value.replaceAll(',','.');
         getData(currentCurr, exchangeCurr, word1left, word2left);
 
     });
 
     word2left.addEventListener('input', (e) => {
-        if(e.target.value === '') {
-            e.target.value = 0;
 
-        }
         e.target.value= e.target.value.replaceAll(',','.');
         getData(exchangeCurr, currentCurr, word2left, word1left);
     });
